@@ -14,7 +14,7 @@ const ReviewCard = ({ review }) => {
                 </div>
 
                 {/* content */}
-                <div className="pt-6">
+                <div className="pt-12">
                     <p className="text-gray-700 leading-relaxed text-base md:text-lg font-medium">
                         {testimonial}
                     </p>
