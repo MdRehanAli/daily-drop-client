@@ -2,7 +2,9 @@ import React from 'react';
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
 
 const ReviewCard = ({ review }) => {
+
     const { userName, review: testimonial, user_photoURL, user_email } = review;
+
     return (
         <div className="max-w-lg mx-auto">
             <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 relative">
