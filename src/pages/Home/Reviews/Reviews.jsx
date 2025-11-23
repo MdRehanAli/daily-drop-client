@@ -10,7 +10,7 @@ const Reviews = ({ reviewsPromise }) => {
 
     return (
         <div className='my-24'>
-            <div className='text-center mb-10'>
+            <div className='text-center mb-24'>
                 <h3 className='text-3xl font-bold text-center my-8'>Review</h3>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius accusantium saepe sint esse dolore enim nam, quaerat id quis, voluptas, placeat illo quidem! Culpa soluta dolore voluptatem velit aperiam, eius odio fugit nam, voluptatibus cupiditate vero mollitia. Pariatur delectus cumque culpa illum voluptatibus, vero ipsam numquam suscipit sapiente, nesciunt modi.</p>
             </div>
