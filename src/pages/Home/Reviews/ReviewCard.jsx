@@ -8,6 +8,7 @@ const ReviewCard = ({ review }) => {
     return (
         <div className="max-w-lg mx-auto">
             <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 relative">
+
                 {/* quote icon */}
                 <div className="absolute top-6 left-6">
                     <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-teal-50 text-teal-300">
