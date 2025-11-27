@@ -6,6 +6,7 @@ import ReviewCard from './ReviewCard';
 const Reviews = ({ reviewsPromise }) => {
 
     const reviews = use(reviewsPromise);
+    // console.log(reviews);
 
     return (
         <div className='my-24'>
