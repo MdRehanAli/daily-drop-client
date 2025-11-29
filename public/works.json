@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "work_name": "Booking Pick & Drop",
+    "description": "From personal packages to business shipments, we deliver on time, every time."
+  },
+  {
+    "id": 2,
+    "work_name": "Cash On Delivery",
+    "description": "Grow your business confidently with secure cash collection and fast doorstep delivery."
+  },
+  {
+    "id": 3,
+    "work_name": "Same Day Delivery",
+    "description": "Urgent parcels delivered within hours, reliable service for time-sensitive needs."
+  },
+  {
+    "id": 4,
+    "work_name": "Bulk Shipment Service",
+    "description": "Efficient handling of large-volume parcels with affordable rates and smooth logistics."
+  }
+]
