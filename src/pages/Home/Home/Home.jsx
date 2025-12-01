@@ -6,6 +6,7 @@ import Works from '../Works/Works';
 import Services from '../Services/Services';
 import Process from '../Process/Process';
 import Merchant from '../Merchant/Merchant';
+import FAQ from '../FAQ/FAQ';
 
 const reviewsPromise = fetch('/reviews.json').then(res => res.json())
 const worksPromise = fetch('/works.json').then(res => res.json());
@@ -22,6 +23,7 @@ const Home = () => {
             <Process processPromise={processPromise}></Process>
             <Merchant></Merchant>
             <Reviews reviewsPromise={reviewsPromise}></Reviews>
+            <FAQ></FAQ>
         </div>
     );
 };
