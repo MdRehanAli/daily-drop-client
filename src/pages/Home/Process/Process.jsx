@@ -5,7 +5,7 @@ const Process = ({ processPromise }) => {
     const processes = use(processPromise);
 
     return (
-        <div className='flex flex-col gap-6 my-[100px]'>
+        <div className='flex flex-col gap-6 mb-20 mt-[100px] py-20 border-dashed border-y-2 border-[#03464D]'>
             {
                 processes.map(process => <div key={process.id} className='flex flex-col md:flex-row items-center p-8 gap-12 bg-white rounded-3xl'>
                     <img src={process.image} alt="Image" />
