@@ -2,6 +2,7 @@ import React, { use } from 'react';
 import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import ReviewCard from './ReviewCard';
+import customersSupport from '../../../assets/customer-top.png'
 
 const Reviews = ({ reviewsPromise }) => {
 
@@ -9,10 +10,11 @@ const Reviews = ({ reviewsPromise }) => {
     // console.log(reviews);
 
     return (
-        <div className='my-24'>
-            <div className='text-center mb-24'>
-                <h3 className='text-3xl font-bold text-center my-8'>Review</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius accusantium saepe sint esse dolore enim nam, quaerat id quis, voluptas, placeat illo quidem! Culpa soluta dolore voluptatem velit aperiam, eius odio fugit nam, voluptatibus cupiditate vero mollitia. Pariatur delectus cumque culpa illum voluptatibus, vero ipsam numquam suscipit sapiente, nesciunt.</p>
+        <div className='my-[100px]'>
+            <div className='text-center mb-10'>
+                <img className='mx-auto' src={customersSupport} alt="" />
+                <h3 className='text-3xl font-extrabold text-secondary text-center mt-8 mb-6'>What our customers are sayings</h3>
+                <p className='text-[#606060] lg:w-2/3 mx-auto'>Enhance posture, mobility, and well-being effortlessly with Posture Pro. Achieve proper alignment, reduce pain, and strengthen your body with ease!</p>
             </div>
             <Swiper
                 loop={true}

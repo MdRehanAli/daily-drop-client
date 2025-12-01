@@ -19,25 +19,31 @@ const brandLogos = [amazon, amazon_vector, casio, moonstar, randstad, star, star
 
 const Brands = () => {
     return (
-        <Swiper
-            slidesPerView={4}
-            centeredSlides={true}
-            spaceBetween={30}
-            grabCursor={true}
-            // loop={true}
-            autoplay={{
-                delay: 1000,
-                disableOnInteraction: false,
-            }}
-            modules={[Autoplay]}
-        >
-            {
-                brandLogos.map((logo, index) => <SwiperSlide key={index}>
-                    <img src={logo} alt="" />
-                </SwiperSlide>)
-            }
+        <div>
+            <div>
+                <h1 className='text-center text-secondary text-3xl font-extrabold mb-12'>We've helped thousands of sales teams</h1>
+            </div>
+            <Swiper
+                slidesPerView={4}
+                centeredSlides={true}
+                spaceBetween={30}
+                grabCursor={true}
+                // loop={true}
+                autoplay={{
+                    delay: 1000,
+                    disableOnInteraction: false,
+                }}
+                modules={[Autoplay]}
+            >
+                {
+                    brandLogos.map((logo, index) => <SwiperSlide key={index}>
+                        <img src={logo} alt="" />
+                    </SwiperSlide>)
+                }
 
-        </Swiper>
+            </Swiper>
+        </div>
+
     );
 };
 
