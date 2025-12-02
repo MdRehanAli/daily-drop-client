@@ -9,7 +9,7 @@ const FAQ = () => {
 
             {/* Accordion  */}
             <div className='md:w-4/5 mx-auto mt-10 flex flex-col gap-4'>
-                <div className="collapse collapse-arrow bg-white rounded-xl">
+                <div className="collapse collapse-arrow bg-white rounded-xl hover:bg-primary">
                     <input type="radio" name="my-accordion-2" defaultChecked />
                     <div className="collapse-title">
                         <h1 className=' text-secondary p-2 font-bold'>How does this posture corrector work?</h1>
@@ -18,7 +18,7 @@ const FAQ = () => {
                         <p className='m-2 pt-4 border-t-2 border-[#c3dfe2] text-justify'>A posture corrector works by providing support and gentle alignment to your shoulders, back, and spine, encouraging you to maintain proper posture throughout the day. Here’s how it typically functions: A posture corrector works by providing support and gentle alignment to your shoulders.</p>
                     </div>
                 </div>
-                <div className="collapse collapse-arrow bg-white rounded-xl">
+                <div className="collapse collapse-arrow bg-white rounded-xl hover:bg-primary">
                     <input type="radio" name="my-accordion-2" />
                     <div className="collapse-title">
                         <h1 className=' text-secondary p-2 font-bold'>Is it suitable for all ages and body types?</h1>
@@ -27,7 +27,7 @@ const FAQ = () => {
                         <p className='m-2 pt-4 border-t-2 border-[#c3dfe2] text-justify'>Yes, the posture corrector is designed with adjustable straps and flexible materials to comfortably fit most body types and ages.</p>
                     </div>
                 </div>
-                <div className="collapse collapse-arrow bg-white rounded-xl">
+                <div className="collapse collapse-arrow bg-white rounded-xl hover:bg-primary">
                     <input type="radio" name="my-accordion-2" />
                     <div className="collapse-title">
                         <h1 className=' text-secondary p-2 font-bold'>Does it really help with back pain and posture improvement?</h1>
@@ -36,7 +36,7 @@ const FAQ = () => {
                         <p className='m-2 pt-4 border-t-2 border-[#c3dfe2] text-justify'>When worn regularly, it gently aligns your spine and shoulders, reducing strain and supporting better posture over time.</p>
                     </div>
                 </div>
-                <div className="collapse collapse-arrow bg-white rounded-xl">
+                <div className="collapse collapse-arrow bg-white rounded-xl hover:bg-primary">
                     <input type="radio" name="my-accordion-2" />
                     <div className="collapse-title">
                         <h1 className=' text-secondary p-2 font-bold'>Does it have smart features like vibration alerts?</h1>
@@ -45,7 +45,7 @@ const FAQ = () => {
                         <p className='m-2 pt-4 border-t-2 border-[#c3dfe2] text-justify'>Some models include vibration reminders that alert you when you slouch, helping you maintain correct posture throughout the day.</p>
                     </div>
                 </div>
-                <div className="collapse collapse-arrow bg-white rounded-xl">
+                <div className="collapse collapse-arrow bg-white rounded-xl hover:bg-primary">
                     <input type="radio" name="my-accordion-2" />
                     <div className="collapse-title">
                         <h1 className=' text-secondary p-2 font-bold'>How will I be notified when the product is back in stock?</h1>
