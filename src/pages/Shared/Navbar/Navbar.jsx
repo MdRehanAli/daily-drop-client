@@ -6,7 +6,8 @@ const Navbar = () => {
 
     const links = <>
         <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/'>Home</NavLink></li>
+        <li><NavLink to='/'>About Us</NavLink></li>
+        <li><NavLink to='/coverage'>Coverage</NavLink></li>
     </>
 
     return (
