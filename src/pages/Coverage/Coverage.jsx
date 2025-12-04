@@ -26,11 +26,11 @@ const Coverage = () => {
     }
 
     return (
-        <div className='max-w-7xl mx-auto w-11/12 mt-8 py-20 px-[100px] bg-white rounded-4xl'>
+        <div className='max-w-7xl mx-auto w-11/12 mt-8 p-10 md:py-20 md:px-[100px] bg-white rounded-4xl'>
             <h1 className='text-4xl font-extrabold text-secondary'>We are available in 64 districts</h1>
-            <div>
+            <div className='my-12'>
                 <form onSubmit={handleSearch}>
-                    <label className="input">
+                    <label className="input pr-0 rounded-4xl w-full md:w-1/2">
                         <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <g
                                 strokeLinejoin="round"
@@ -44,14 +44,14 @@ const Coverage = () => {
                             </g>
                         </svg>
                         <input type="search" className="grow" placeholder="Search" name='location' />
-
+                        <button className='btn btn-primary text-secondary rounded-4xl'>Search</button>
                     </label>
                 </form>
             </div>
             <div>
                 <MapContainer
                     center={position}
-                    zoom={8}
+                    zoom={7}
                     scrollWheelZoom={false}
                     ref={mapRef}
                     className='h-[600px] w-full'>
