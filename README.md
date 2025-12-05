@@ -1,7 +1,13 @@
 # Daily Drop
 
-Welcome to **Daily Drop **!  
-A curated collection of tools, guides, and assets for developing robust parcel management systems.
+Welcome to **Daily Drop**!
+
+## <u>Overview</u>
+
+1. **Daily Drop** is a home/office pickup parcel delivery system that streamlines booking, tracking, and delivery processes.
+2. It offers tracking, delivery, and digital proof of delivery, enhancing efficiency and customer satisfaction.
+3. Designed for businesses, it simplifies logistics while ensuring fast, reliable, and transparent delivery operations.
+
 
 ---
 

@@ -19,7 +19,7 @@ const Register = () => {
         const profileImage = data.photo[0];
         registerUser(data.email, data.password)
             .then(result => {
-                // console.log(result.user);
+                console.log(result.user);
                 // 1. Store the image in formData.  
                 const formData = new FormData();
                 formData.append('image', profileImage);
