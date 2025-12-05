@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import useAuth from '../../../hooks/useAuth';
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import axios from 'axios';
 
@@ -11,12 +11,15 @@ const Register = () => {
 
     const { registerUser, updateUser } = useAuth();
 
+    const location = useLocation();
+    const navigate = useNavigate();
+
     const handleRegister = (data) => {
         console.log("After Submit:", data.photo[0]);
         const profileImage = data.photo[0];
         registerUser(data.email, data.password)
             .then(result => {
-                console.log(result.user)
+                // console.log(result.user);
                 // 1. Store the image in formData.  
                 const formData = new FormData();
                 formData.append('image', profileImage);
@@ -25,7 +28,7 @@ const Register = () => {
                 const image_API_URL = `https://api.imgbb.com/1/upload?key=${import.meta.env.VITE_image_host_KEY}`
                 axios.post(image_API_URL, formData)
                     .then(res => {
-                        console.log("After Image Upload:", res.data.data.url)
+                        // console.log("After Image Upload:", res.data.data.url);
 
                         // Update user profile to firebase 
                         const userProfile = {
@@ -37,6 +40,7 @@ const Register = () => {
                         updateUser(userProfile)
                             .then(() => {
                                 console.log('User Profile Updated');
+                                navigate(location.state || '/');
                             })
                             .catch(error => {
                                 console.log(error.message)
@@ -83,7 +87,7 @@ const Register = () => {
 
                         <button className="btn bg-primary mt-4">Register</button>
                     </fieldset>
-                    <p className='mt-3 text-[#71717a]'>Already have an account? <Link to='/login' className='text-primary underline font-bold'>Login</Link></p>
+                    <p className='mt-3 text-[#71717a]'>Already have an account? <Link state={location.state} to='/login' className='text-primary underline font-bold'>Login</Link></p>
                 </form>
                 <SocialLogin></SocialLogin>
             </div>
