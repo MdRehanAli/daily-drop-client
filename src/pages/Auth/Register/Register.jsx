@@ -11,10 +11,13 @@ const Register = () => {
     const { registerUser } = useAuth();
 
     const handleRegister = (data) => {
-        console.log("After Submit:", data);
+        console.log("After Submit:", data.photo[0]);
         registerUser(data.email, data.password)
             .then(result => {
                 console.log(result.user)
+                // Store the image and get the photo URL 
+
+                // Update user profile 
             })
             .catch(error => {
                 console.log(error.message);
@@ -28,6 +31,18 @@ const Register = () => {
                 <p className=' text-center mb-5 text-secondary'>Register with DailyDrop</p>
                 <form onSubmit={handleSubmit(handleRegister)}>
                     <fieldset className="fieldset">
+                        {/* Name Field  */}
+                        <label className="label">Name</label>
+                        <input type="text" {...register('name', { required: true, minLength: 3 })} className="input" placeholder="Name" />
+                        {errors.name?.type === "required" && <p className='text-red-500'>Name is Required.</p>}
+                        {errors.name?.type === "minLength" && <p className='text-red-500'>Name must have 3 letters.</p>}
+
+                        {/* Photo Image Field  */}
+                        <label className="label">Name</label>
+                        <input type="file" {...register('photo', { required: true })} className="file-input" placeholder="Your Photo" />
+                        {errors.photo?.type === "required" && <p className='text-red-500'>Photo is Required.</p>}
+
+                        {/* Email Field  */}
                         <label className="label">Email</label>
                         <input type="email" {...register('email', { required: true })} className="input" placeholder="Email" />
                         {errors.email?.type === "required" && <p className='text-red-500'>Email is Required.</p>}
@@ -39,8 +54,6 @@ const Register = () => {
                         {errors.password?.type === "required" && <p className='text-red-500'>Password is Required.</p>}
                         {errors.password?.type === "minLength" && <p className='text-red-500'>Password must have at least 6 Character length.</p>}
                         {errors.password?.type === "pattern" && <p className='text-red-500'>Password must have at least one Uppercase, at least one Lowercase, at least one Number, and at least one Special Character.</p>}
-
-                        <div><a className="link link-hover">Forgot password?</a></div>
 
                         <button className="btn bg-primary mt-4">Register</button>
                     </fieldset>

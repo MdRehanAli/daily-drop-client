@@ -4,14 +4,16 @@ import Home from "../pages/Home/Home/Home";
 import Coverage from "../pages/Coverage/Coverage";
 import Error from "../pages/Error/Error";
 import About from "../pages/About/About";
-import AuthLaout from "../layouts/AuthLaout";
+import AuthLayout from "../layouts/AuthLayout";
 import Login from "../pages/Auth/Login/Login";
 import Register from "../pages/Auth/Register/Register";
+import Loading from "../components/Loading/Loading";
 
 const router = createBrowserRouter([
     {
         path: '/',
         Component: RootLayout,
+        hydrateFallbackElement: <Loading></Loading>,
         children: [
             {
                 index: true,
@@ -35,7 +37,8 @@ const router = createBrowserRouter([
     },
     {
         path: '/',
-        Component: AuthLaout,
+        Component: AuthLayout,
+        hydrateFallbackElement: <Loading></Loading>,
         children: [
             {
                 path: '/login',
