@@ -27,7 +27,7 @@ const Coverage = () => {
 
     return (
         <div className='max-w-7xl mx-auto w-11/12 mt-8 p-10 md:py-20 md:px-[100px] bg-white rounded-4xl'>
-            <h1 className='text-4xl font-extrabold text-secondary'>We are available in 64 districts</h1>
+            <h1 className='text-3xl md:text-5xl font-extrabold text-secondary'>We are available in 64 districts</h1>
             <div className='my-12'>
                 <form onSubmit={handleSearch}>
                     <label className="input pr-0 rounded-4xl w-full md:w-1/2">

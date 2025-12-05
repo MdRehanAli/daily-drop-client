@@ -2,6 +2,7 @@ import React from 'react';
 import Logo from '../../../components/Logo/Logo';
 import { Link, NavLink } from 'react-router';
 import useAuth from '../../../hooks/useAuth';
+import './Navbar.css'
 
 const Navbar = () => {
 
@@ -16,9 +17,10 @@ const Navbar = () => {
     }
 
     const links = <>
-        <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/about'>About Us</NavLink></li>
-        <li><NavLink to='/coverage'>Coverage</NavLink></li>
+        <li><NavLink className='rounded-4xl font-semibold' to='/'>Home</NavLink></li>
+        <li><NavLink className='rounded-4xl font-semibold' to='/about'>About Us</NavLink></li>
+        <li><NavLink className='rounded-4xl font-semibold' to='/coverage'>Coverage</NavLink></li>
+        <li><NavLink className='rounded-4xl font-semibold' to='/send-parcel'>Send Parcel</NavLink></li>
     </>
 
     return (
@@ -34,9 +36,9 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">
+                <div className="btn btn-ghost text-xl">
                     <Logo></Logo>
-                </a>
+                </div>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
