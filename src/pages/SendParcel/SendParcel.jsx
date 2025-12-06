@@ -77,11 +77,11 @@ const SendParcel = () => {
                     <div className='border-y border-[#0000001a] my-8'>
                         <div className='pt-8'>
                             <label className="label mr-4">
-                                <input type="radio" {...register('parcelType')} value="document" className="radio" defaultChecked />
+                                <input type="radio" {...register('parcelType', { required: true })} value="document" className="radio" defaultChecked />
                                 Document
                             </label>
                             <label className="label">
-                                <input type="radio" {...register('parcelType')} value="non-document" className="radio" />
+                                <input type="radio" {...register('parcelType', { required: true })} value="non-document" className="radio" />
                                 Non-Document
                             </label>
                         </div>
@@ -90,11 +90,11 @@ const SendParcel = () => {
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-12 my-8'>
                             <fieldset className="fieldset">
                                 <label className="label">Parcel Name</label>
-                                <input type="text" {...register('parcelName')} className="input w-full" placeholder="Parcel Name" />
+                                <input type="text" {...register('parcelName', { required: true })} className="input w-full" placeholder="Parcel Name" />
                             </fieldset>
                             <fieldset className="fieldset">
                                 <label className="label">Parcel Weight (KG) </label>
-                                <input type="number" {...register('parcelWeight')} className="input w-full" placeholder="Parcel Weight (KG) " />
+                                <input type="number" {...register('parcelWeight', { required: true })} className="input w-full" placeholder="Parcel Weight (KG) " />
                             </fieldset>
                         </div>
                     </div>
@@ -106,16 +106,16 @@ const SendParcel = () => {
                             <h4 className="font-bold mb-8">Sender Details</h4>
                             {/* Sender Name  */}
                             <label className="label font-bold">Sender Name</label>
-                            <input type="text" {...register('senderName')} className="input w-full" placeholder="Sender Name" />
+                            <input type="text" {...register('senderName', { required: true })} className="input w-full" placeholder="Sender Name" />
 
                             {/* Sender Email  */}
                             <label className="label mt-5 font-bold">Sender Email</label>
-                            <input type="email" {...register('senderEmail')} className="input w-full" placeholder="Sender Email" />
+                            <input type="email" {...register('senderEmail', { required: true })} className="input w-full" placeholder="Sender Email" />
 
                             {/* Sender Region  */}
                             <fieldset className="fieldset">
                                 <label className="label mt-5 font-bold">Sender Regions</label>
-                                <select {...register('senderRegion')} defaultValue="Pick a Region" className="select w-full">
+                                <select {...register('senderRegion', { required: true })} defaultValue="Pick a Region" className="select w-full">
                                     <option disabled={true}>Pick a Region</option>
                                     {
                                         regions.map((r, i) => <option key={i} value={r}>{r}</option>)
@@ -126,7 +126,7 @@ const SendParcel = () => {
                             {/* Sender Districts  */}
                             <fieldset className="fieldset">
                                 <label className="label mt-5 font-bold">Sender Districts</label>
-                                <select {...register('senderDistrict')} defaultValue="Pick a Districts" className="select w-full">
+                                <select {...register('senderDistrict', { required: true })} defaultValue="Pick a Districts" className="select w-full">
                                     <option disabled={true}>Pick a Districts</option>
                                     {
                                         districtByRegion(senderRegion).map((d, i) => <option key={i} value={d}>{d}</option>)
@@ -136,15 +136,15 @@ const SendParcel = () => {
 
                             {/* Sender Address  */}
                             <label className="label mt-5 font-bold">Sender Address</label>
-                            <input type="text" {...register('senderAddress')} className="input w-full" placeholder="Sender Address" />
+                            <input type="text" {...register('senderAddress', { required: true })} className="input w-full" placeholder="Sender Address" />
 
                             {/* Sender Phone No  */}
                             <label className="label mt-5 font-bold">Sender Phone No</label>
-                            <input type="text" {...register('senderPhoneNo')} className="input w-full" placeholder="Sender Phone No" />
+                            <input type="text" {...register('senderPhoneNo', { required: true })} className="input w-full" placeholder="Sender Phone No" />
 
                             {/* Pickup Instruction  */}
                             <label className="label mt-5 font-bold">Pickup Instruction</label>
-                            <textarea rows={5} className='w-full border border-gray-300 rounded-sm' name="" {...register('pickupInstruction')} id=""></textarea>
+                            <textarea rows={5} className='w-full border border-gray-300 rounded-sm' name="" {...register('pickupInstruction', { required: true })} id=""></textarea>
                         </fieldset>
 
                         {/* Receiver Details  */}
@@ -152,17 +152,17 @@ const SendParcel = () => {
                             <h4 className="font-bold mb-8">Receiver Details</h4>
                             {/* Receiver Name  */}
                             <label className="label font-bold">Receiver Name</label>
-                            <input type="text" {...register('receiverName')} className="input w-full" placeholder="Receiver Name" />
+                            <input type="text" {...register('receiverName', { required: true })} className="input w-full" placeholder="Receiver Name" />
 
                             {/* Receiver Email  */}
                             <label className="label mt-5 font-bold">Receiver Email</label>
-                            <input type="email" {...register('receiverEmail')} className="input w-full" placeholder="Receiver Email" />
+                            <input type="email" {...register('receiverEmail', { required: true })} className="input w-full" placeholder="Receiver Email" />
 
 
                             {/* Receiver Region  */}
                             <fieldset className="fieldset">
                                 <label className="label mt-5 font-bold">Receiver Regions</label>
-                                <select {...register('receiverRegion')} defaultValue="Pick a Region" className="select w-full">
+                                <select {...register('receiverRegion', { required: true })} defaultValue="Pick a Region" className="select w-full">
                                     <option disabled={true}>Pick a Region</option>
                                     {
                                         regions.map((r, i) => <option key={i} value={r}>{r}</option>)
@@ -173,7 +173,7 @@ const SendParcel = () => {
                             {/* Receiver Districts  */}
                             <fieldset className="fieldset">
                                 <label className="label mt-5 font-bold">Receiver Districts</label>
-                                <select {...register('receiverDistrict')} defaultValue="Pick a Districts" className="select w-full">
+                                <select {...register('receiverDistrict', { required: true })} defaultValue="Pick a Districts" className="select w-full">
                                     <option disabled={true}>Pick a Districts</option>
                                     {
                                         districtByRegion(receiverRegion).map((d, i) => <option key={i} value={d}>{d}</option>)
@@ -183,16 +183,16 @@ const SendParcel = () => {
 
                             {/* Receiver Address  */}
                             <label className="label mt-5 font-bold">Receiver Address</label>
-                            <input type="text" {...register('receiverAddress')} className="input w-full" placeholder="Receiver Address" />
+                            <input type="text" {...register('receiverAddress', { required: true })} className="input w-full" placeholder="Receiver Address" />
 
 
                             {/* Receiver Phone No  */}
                             <label className="label mt-5 font-bold">Receiver Phone No</label>
-                            <input type="text" {...register('receiverPhoneNo')} className="input w-full" placeholder="Receiver Phone No" />
+                            <input type="text" {...register('receiverPhoneNo', { required: true })} className="input w-full" placeholder="Receiver Phone No" />
 
                             {/* Delivery Instruction  */}
                             <label className="label mt-5 font-bold">Delivery Instruction</label>
-                            <textarea rows={5} className='w-full border border-gray-300 rounded-sm' name="" {...register('deliveryInstruction')} id=""></textarea>
+                            <textarea rows={5} className='w-full border border-gray-300 rounded-sm' name="" {...register('deliveryInstruction', { required: true })} id=""></textarea>
                         </fieldset>
                     </div>
                     <p className='my-12'>* PickUp Time 4pm-7pm Approx.</p>
