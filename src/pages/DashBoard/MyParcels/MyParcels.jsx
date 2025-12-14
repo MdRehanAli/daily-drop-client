@@ -81,12 +81,12 @@ const MyParcels = () => {
                                 <td>{parcel.cost}</td>
                                 <td>
                                     {
-                                        parcel.paymentStatus == 'paid'?
-                                        <span className='text-green-400'>Paid</span>
-                                        :
-                                        <Link to=''>
-                                        <button className="btn btn-primary text-black btn-sm">Pay</button>
-                                        </Link>
+                                        parcel.paymentStatus === 'paid' ?
+                                            <span className='text-green-400'>Paid</span>
+                                            :
+                                            <Link to={`/dashboard/payment/${parcel._id}`}>
+                                                <button className="btn btn-primary text-black btn-sm">Pay</button>
+                                            </Link>
                                     }
                                 </td>
                                 <td>{parcel.deliveryStatus}</td>
