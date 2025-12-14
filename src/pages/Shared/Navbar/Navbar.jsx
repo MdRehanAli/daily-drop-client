@@ -21,6 +21,12 @@ const Navbar = () => {
         <li><NavLink className='rounded-4xl font-semibold' to='/about'>About Us</NavLink></li>
         <li><NavLink className='rounded-4xl font-semibold' to='/coverage'>Coverage</NavLink></li>
         <li><NavLink className='rounded-4xl font-semibold' to='/send-parcel'>Send Parcel</NavLink></li>
+
+        {
+            user && <>
+                <li><NavLink className='rounded-4xl font-semibold' to='/dashboard/my-parcels'>My Parcel</NavLink></li>
+            </>
+        }
     </>
 
     return (
