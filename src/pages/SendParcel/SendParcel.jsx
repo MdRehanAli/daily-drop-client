@@ -53,6 +53,7 @@ const SendParcel = () => {
             }
         }
         console.log("cost", cost);
+        data.cost = cost;
 
         Swal.fire({
             title: "Agree with the Cost",
@@ -72,8 +73,8 @@ const SendParcel = () => {
                     })
 
                 Swal.fire({
-                    title: "Deleted!",
-                    text: "Your file has been deleted.",
+                    title: "Succeed!",
+                    text: "Your parcel will be deliver soon.",
                     icon: "success"
                 });
             }
