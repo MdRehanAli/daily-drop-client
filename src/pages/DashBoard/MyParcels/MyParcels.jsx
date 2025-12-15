@@ -22,8 +22,6 @@ const MyParcels = () => {
 
     const handleParcelDelete = id => {
 
-
-
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",
@@ -56,6 +54,18 @@ const MyParcels = () => {
         });
     }
 
+    const handlePayment = async (parcel) => {
+        const paymentInfo = {
+            cost: parcel.cost,
+            parcelId: parcel._id,
+            senderEmail: parcel.senderEmail,
+            parcelName: parcel.parcelName
+        }
+
+        const res = await axiosSecure.post('/payment-checkout-session', paymentInfo)
+        window.location.assign(res.data.url);
+    }
+
     return (
         <div>
             <h1>All of my Parcels: {parcels.length}</h1>
@@ -81,12 +91,10 @@ const MyParcels = () => {
                                 <td>{parcel.cost}</td>
                                 <td>
                                     {
-                                        parcel.paymentStatus === 'paid' ?
+                                        parcel.payment_status === 'paid' ?
                                             <span className='text-green-400'>Paid</span>
                                             :
-                                            <Link to={`/dashboard/payment/${parcel._id}`}>
-                                                <button className="btn btn-primary text-black btn-sm">Pay</button>
-                                            </Link>
+                                            <button onClick={() => handlePayment(parcel)} className="btn btn-primary text-black btn-sm">Pay</button>
                                     }
                                 </td>
                                 <td>{parcel.deliveryStatus}</td>
