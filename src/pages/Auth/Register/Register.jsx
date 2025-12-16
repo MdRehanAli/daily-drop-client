@@ -4,6 +4,7 @@ import useAuth from '../../../hooks/useAuth';
 import { Link, useLocation, useNavigate } from 'react-router';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import axios from 'axios';
+import useAxiosSecure from '../../../hooks/useAxiosSecure';
 
 const Register = () => {
 
@@ -14,12 +15,12 @@ const Register = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
+    const axiosSecure = useAxiosSecure();
+
     const handleRegister = (data) => {
-        console.log("After Submit:", data.photo[0]);
         const profileImage = data.photo[0];
         registerUser(data.email, data.password)
-            .then(result => {
-                console.log(result.user);
+            .then(() => {
                 // 1. Store the image in formData.  
                 const formData = new FormData();
                 formData.append('image', profileImage);
@@ -28,12 +29,25 @@ const Register = () => {
                 const image_API_URL = `https://api.imgbb.com/1/upload?key=${import.meta.env.VITE_image_host_KEY}`
                 axios.post(image_API_URL, formData)
                     .then(res => {
-                        // console.log("After Image Upload:", res.data.data.url);
+                        const photoURL = res.data.data.url;
+
+                        // Create user in the database 
+                        const userInfo = {
+                            email: data.email,
+                            displayName: data.name,
+                            photoURL: photoURL,
+                        }
+                        axiosSecure.post('/users', userInfo)
+                            .then(res => {
+                                if (res.data.insertedId) {
+                                    console.log("User created in the database.")
+                                }
+                            })
 
                         // Update user profile to firebase 
                         const userProfile = {
                             displayName: data.name,
-                            photoURL: res.data.data.url
+                            photoURL: photoURL
 
                         }
 
