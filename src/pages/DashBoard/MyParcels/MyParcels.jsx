@@ -78,6 +78,7 @@ const MyParcels = () => {
                             <th>Name</th>
                             <th>Cost</th>
                             <th>Payment Status</th>
+                            <th>Tracking Id</th>
                             <th>Delivery Status</th>
                             <th>Actions</th>
                         </tr>
@@ -97,6 +98,7 @@ const MyParcels = () => {
                                             <button onClick={() => handlePayment(parcel)} className="btn btn-primary text-black btn-sm">Pay</button>
                                     }
                                 </td>
+                                <td>{parcel.trackingId}</td>
                                 <td>{parcel.deliveryStatus}</td>
                                 <td>
                                     <button className='btn btn-square hover:bg-primary'>
