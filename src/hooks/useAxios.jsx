@@ -2,7 +2,7 @@ import axios from 'axios';
 import React from 'react';
 
 const axiosInstance = axios.create({
-    baseURL: 'https://daily-drop-server.vercel.app'
+    baseURL: 'https://daily-drop-alpha.vercel.app'
 })
 
 const useAxios = () => {

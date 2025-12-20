@@ -4,7 +4,7 @@ import useAuth from './useAuth';
 import { useNavigate } from 'react-router';
 
 const axiosSecure = axios.create({
-    baseURL: 'https://daily-drop-server.vercel.app'
+    baseURL: 'https://daily-drop-alpha.vercel.app'
 })
 
 const useAxiosSecure = () => {
