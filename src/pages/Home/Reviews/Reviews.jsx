@@ -21,7 +21,17 @@ const Reviews = ({ reviewsPromise }) => {
                 effect={'coverflow'}
                 grabCursor={true}
                 centeredSlides={true}
-                slidesPerView={3}
+                breakpoints={{
+                    0: {            // Mobile
+                        slidesPerView: 1,
+                    },
+                    768: {          // Tablet / Medium
+                        slidesPerView: 2,
+                    },
+                    1024: {         // Laptop / Large
+                        slidesPerView: 3,
+                    },
+                }}
                 autoplay={{
                     delay: 1000,
                     disableOnInteraction: false,

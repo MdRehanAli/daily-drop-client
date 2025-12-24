@@ -4,7 +4,7 @@ import merchantBG from '../../../assets/be-a-merchant-bg.png'
 
 const Merchant = () => {
     return (
-        <div className='flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:gap-5 px-5 py-10 md:p-20 bg-secondary rounded-4xl bg-no-repeat' style={{ backgroundImage: `url(${merchantBG})` }}>
+        <div className='flex flex-col-reverse lg:flex-row items-center justify-between gap-10 md:gap-5 px-5 py-10 md:p-20 bg-secondary rounded-4xl bg-no-repeat' style={{ backgroundImage: `url(${merchantBG})` }}>
             <div>
                 <h1 className='text-4xl text-white font-extrabold'>Merchant and Customer Satisfaction is Our First Priority</h1>
                 <div className=''>
