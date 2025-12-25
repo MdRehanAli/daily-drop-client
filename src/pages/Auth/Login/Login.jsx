@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import useAuth from '../../../hooks/useAuth';
 import { Link, useLocation, useNavigate } from 'react-router';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import { FaEye, FaEyeSlash } from 'react-icons/fa6';
 
 const Login = () => {
 
@@ -12,6 +13,12 @@ const Login = () => {
 
     const navigate = useNavigate()
     const location = useLocation()
+
+    const [showPassword, setShowPassword] = useState(false)
+    const handleShowPassword = (event) => {
+        event.preventDefault();
+        setShowPassword(!showPassword);
+    }
 
     const handleSignIn = (data) => {
         console.log("After Sign in:", data)
@@ -41,7 +48,10 @@ const Login = () => {
 
                         {/* Password Field  */}
                         <label className="label">Password</label>
-                        <input type="password" {...register("password", { required: true, minLength: 6 })} className="input" placeholder="Password" />
+                        <div className='flex items-center relative'>
+                            <input type={showPassword ? "text" : "password"} {...register("password", { required: true, minLength: 6 })} className="input" placeholder="Password" />
+                            <button onClick={handleShowPassword} className='absolute top-2 right-7 text-xl text-primary'>{showPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>}</button>
+                        </div>
 
                         {errors.password?.type === "required" && <p className='text-red-500'>Password is Required.</p>}
                         {errors.password?.type === "minLength" && <p className='text-red-500'>Password must have at least 6 Character length.</p>}
