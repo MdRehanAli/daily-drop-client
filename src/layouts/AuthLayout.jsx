@@ -7,7 +7,7 @@ import Footer from '../pages/Shared/Footer/Footer';
 const AuthLayout = () => {
     return (
         <div className='bg-[#eaeced]'>
-            <div className='bg-white pl-2 py-3 w-full'>
+            <div className='pl-2 py-3 w-full bg-base-100 shadow-sm'>
                 <div className='btn btn-ghost text-xl'>
                     <Logo></Logo>
                 </div>
