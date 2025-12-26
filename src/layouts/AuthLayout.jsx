@@ -12,7 +12,7 @@ const AuthLayout = () => {
                     <Logo></Logo>
                 </div>
             </div>
-            <div className='flex items-center my-8 max-w-7xl mx-auto w-11/12'>
+            <div className='flex flex-col md:flex-row gap-8 items-center my-8 max-w-7xl mx-auto w-11/12'>
                 <div className='flex-1'>
                     <Outlet></Outlet>
                 </div>
