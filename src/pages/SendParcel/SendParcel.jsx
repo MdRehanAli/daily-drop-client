@@ -219,7 +219,7 @@ const SendParcel = () => {
                         </fieldset>
                     </div>
                     <p className='my-12'>* PickUp Time 4pm-7pm Approx.</p>
-                    <input type="submit" className='btn btn-primary text-secondary' value="Proceed to Confirm Booking" />
+                    <input type="submit" className='btn btn-primary text-secondary md:w-fit w-full' value="Proceed to Confirm Booking" />
                 </form>
             </div>
         </div>
