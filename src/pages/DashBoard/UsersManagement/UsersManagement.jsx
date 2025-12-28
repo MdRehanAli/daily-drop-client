@@ -79,24 +79,25 @@ const UsersManagement = () => {
     }
 
     return (
-        <div>
-            <h1>Manage users {users.length}</h1>
-            <p>Search Text : {searchText}</p>
-            <label className="input">
-                <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <g
-                        strokeLinejoin="round"
-                        strokeLinecap="round"
-                        strokeWidth="2.5"
-                        fill="none"
-                        stroke="currentColor"
-                    >
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <path d="m21 21-4.3-4.3"></path>
-                    </g>
-                </svg>
-                <input onChange={(e) => setSearchText(e.target.value)} type="search" className="grow" placeholder="Search Users" />
-            </label>
+        <div className='shadow-xl bg-gray-100 rounded-2xl p-5 py-10 md:p-10 w-11/12 mx-auto mt-8'>
+            <h1 className='text-3xl md:text-5xl text-center font-extrabold text-secondary mb-5'>Manage Users: {users.length}</h1>
+            <div className='flex items-center justify-center'>
+                <label className="input w-full md:w-1/3 mb-8 border-2 border-primary">
+                    <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <g
+                            strokeLinejoin="round"
+                            strokeLinecap="round"
+                            strokeWidth="2.5"
+                            fill="none"
+                            stroke="currentColor"
+                        >
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.3-4.3"></path>
+                        </g>
+                    </svg>
+                    <input onChange={(e) => setSearchText(e.target.value)} type="search" className="grow" placeholder="Search Users" />
+                </label>
+            </div>
 
             <div className="overflow-x-auto">
                 <table className="table table-zebra">
