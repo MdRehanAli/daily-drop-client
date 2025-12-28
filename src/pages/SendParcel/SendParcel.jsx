@@ -208,7 +208,6 @@ const SendParcel = () => {
                             <label className="label mt-5 font-bold">Receiver Address</label>
                             <input type="text" {...register('receiverAddress', { required: true })} className="input w-full" placeholder="Receiver Address" />
 
-
                             {/* Receiver Phone No  */}
                             <label className="label mt-5 font-bold">Receiver Phone No</label>
                             <input type="text" {...register('receiverPhoneNo', { required: true })} className="input w-full" placeholder="Receiver Phone No" />
