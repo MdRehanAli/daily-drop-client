@@ -17,9 +17,9 @@ const ParcelTrack = () => {
     })
 
     return (
-        <div className='p-8'>
-            <h2 className='text-4xl'>Track your Packages: {trackingId}</h2>
-            <p>Logs so far: {trackings.length}</p>
+        <div className='shadow-xl bg-gray-100 rounded-2xl p-5 py-10 md:p-10 w-11/12 mx-auto mt-8'>
+            <h1 className='text-3xl md:text-5xl text-center font-extrabold text-secondary mb-5'>Track your Packages: {trackingId}</h1>
+            <p className='text-center'>Logs so far: {trackings.length}</p>
 
             <ul className="timeline timeline-vertical">
                 {

@@ -103,7 +103,7 @@ const MyParcels = () => {
                                     <Link to={`/parcel-track/${parcel.trackingId}`}>{parcel.trackingId}</Link>
                                 </td>
                                 <td>{parcel.deliveryStatus}</td>
-                                <td>
+                                <td className='flex'>
                                     <button className='btn btn-square hover:bg-primary'>
                                         <FiEdit></FiEdit>
                                     </button>

@@ -167,7 +167,7 @@ const SendParcel = () => {
 
                             {/* Pickup Instruction  */}
                             <label className="label mt-5 font-bold">Pickup Instruction</label>
-                            <textarea rows={5} className='w-full border border-gray-300 rounded-sm' name="" {...register('pickupInstruction', { required: true })} id=""></textarea>
+                            <textarea rows={5} className='w-full border border-gray-300 rounded-sm p-2' name="" {...register('pickupInstruction', { required: true })} id=""></textarea>
                         </fieldset>
 
                         {/* Receiver Details  */}
@@ -214,7 +214,7 @@ const SendParcel = () => {
 
                             {/* Delivery Instruction  */}
                             <label className="label mt-5 font-bold">Delivery Instruction</label>
-                            <textarea rows={5} className='w-full border border-gray-300 rounded-sm' name="" {...register('deliveryInstruction', { required: true })} id=""></textarea>
+                            <textarea rows={5} className='w-full border border-gray-300 rounded-sm p-2' name="" {...register('deliveryInstruction', { required: true })} id=""></textarea>
                         </fieldset>
                     </div>
                     <p className='my-12'>* PickUp Time 4pm-7pm Approx.</p>
