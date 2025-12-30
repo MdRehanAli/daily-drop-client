@@ -1,8 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useRef, useState } from 'react';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
-import { FiEdit } from 'react-icons/fi';
-import { FaMagnifyingGlass, FaTrashCan } from 'react-icons/fa6';
 import Swal from 'sweetalert2';
 
 const AssignRider = () => {
