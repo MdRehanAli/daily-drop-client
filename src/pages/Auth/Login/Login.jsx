@@ -25,16 +25,16 @@ const Login = () => {
 
     const demoCredentials = {
         admin: {
-            email: "gtracker@gmail.com",
-            password: "Gtracker"
+            email: "bakervai@gmail.com",
+            password: "Bakervai@10"
         },
-        manager: {
-            email: "manager@gmail.com",
-            password: "Manager"
+        rider: {
+            email: "rider@gmail.com",
+            password: "Rider@10"
         },
         user: {
             email: "user@gmail.com",
-            password: "User123"
+            password: "User@100"
         }
     };
 
@@ -58,9 +58,9 @@ const Login = () => {
                 Swal.fire({
                     position: "top-end",
                     icon: "success",
-                    iconColor: "#0f172b",
-                    color: "#0f172b",
-                    background: "#7C3AED",
+                    iconColor: "#03373D",
+                    color: "#03373D",
+                    background: "#CAEB66",
                     title: "Login Successfully",
                     showConfirmButton: false,
                     timer: 1500
@@ -73,9 +73,9 @@ const Login = () => {
                 Swal.fire({
                     position: "top-end",
                     icon: "error",
-                    iconColor: "#0f172b",
-                    color: "#0f172b",
-                    background: "#7C3AED",
+                    iconColor: "#03373D",
+                    color: "#03373D",
+                    background: "#CAEB66",
                     title: "Invalid Email & Password",
                     showConfirmButton: false,
                     timer: 1500
@@ -123,10 +123,10 @@ const Login = () => {
                             <span className="text-secondary text-[10px] font-bold tracking-wider">ADMIN</span>
                         </button>
 
-                        {/* Fill Manager Credential  */}
-                        <button onClick={() => handleDemoLogin("manager")} className="flex flex-col items-center justify-center gap-2 p-3 rounded-md  border  border-primary/50 hover:bg-primary/10 transition-all group bg-primary">
+                        {/* Fill Rider Credential  */}
+                        <button onClick={() => handleDemoLogin("rider")} className="flex flex-col items-center justify-center gap-2 p-3 rounded-md  border  border-primary/50 hover:bg-primary/10 transition-all group bg-primary">
                             <div className='text-secondary group-hover:scale-110 transition-transform text-2xl group-hover:text-primary'><GrUserSettings className='' /></div>
-                            <span className="text-secondary text-[10px] font-bold tracking-wider">MANAGER</span>
+                            <span className="text-secondary text-[10px] font-bold tracking-wider">RIDER</span>
                         </button>
 
                         {/* Fill User Credential  */}
