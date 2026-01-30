@@ -3,7 +3,9 @@ import { useForm } from 'react-hook-form';
 import useAuth from '../../../hooks/useAuth';
 import { Link, useLocation, useNavigate } from 'react-router';
 import SocialLogin from '../SocialLogin/SocialLogin';
-import { FaEye, FaEyeSlash } from 'react-icons/fa6';
+import { FaEye, FaEyeSlash, FaRegUser } from 'react-icons/fa6';
+import { MdOutlineAdminPanelSettings } from "react-icons/md";
+import { GrUserSettings } from 'react-icons/gr';
 
 const Login = () => {
 
@@ -63,6 +65,28 @@ const Login = () => {
                     <p className='mt-3 text-[#71717a]'>Don’t have any account? <Link state={location.state} to='/register' className='text-primary underline font-bold'>Register</Link></p>
                 </form>
                 <SocialLogin></SocialLogin>
+                <div>
+                    <p className="text-primary text-[11px] font-bold mb-4 uppercase tracking-[0.25em] text-center opacity-60">Demo Quick Access</p>
+                    {/* Fill Admin credentials  */}
+                    <div className="grid grid-cols-3 gap-3">
+                        <button onClick={() => handleDemoLogin("admin")} className="flex flex-col items-center justify-center gap-2 p-3 rounded-md  border  border-primary/50 hover:bg-primary/10 transition-all group bg-primary">
+                            <div className='text-secondary group-hover:scale-110 transition-transform text-2xl group-hover:text-primary'><MdOutlineAdminPanelSettings className='' /></div>
+                            <span className="text-secondary text-[10px] font-bold tracking-wider">ADMIN</span>
+                        </button>
+
+                        {/* Fill Manager Credential  */}
+                        <button onClick={() => handleDemoLogin("manager")} className="flex flex-col items-center justify-center gap-2 p-3 rounded-md  border  border-primary/50 hover:bg-primary/10 transition-all group bg-primary">
+                            <div className='text-secondary group-hover:scale-110 transition-transform text-2xl group-hover:text-primary'><GrUserSettings className='' /></div>
+                            <span className="text-secondary text-[10px] font-bold tracking-wider">MANAGER</span>
+                        </button>
+
+                        {/* Fill User Credential  */}
+                        <button onClick={() => handleDemoLogin("user")} className="flex flex-col items-center justify-center gap-2 p-3 rounded-md border  border-primary/50 hover:bg-primary/10 transition-all group bg-primary">
+                            <div className='text-secondary group-hover:scale-110 transition-transform text-2xl group-hover:text-primary'><FaRegUser className='' /></div>
+                            <span className="text-secondary text-[10px] font-bold tracking-wider">USER</span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     );
