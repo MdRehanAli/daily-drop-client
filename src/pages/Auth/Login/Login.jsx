@@ -9,7 +9,7 @@ import { GrUserSettings } from 'react-icons/gr';
 
 const Login = () => {
 
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, setValue, formState: { errors } } = useForm();
 
     const { signInUser } = useAuth()
 
@@ -21,6 +21,32 @@ const Login = () => {
         event.preventDefault();
         setShowPassword(!showPassword);
     }
+
+    const demoCredentials = {
+        admin: {
+            email: "gtracker@gmail.com",
+            password: "Gtracker"
+        },
+        manager: {
+            email: "manager@gmail.com",
+            password: "Manager"
+        },
+        user: {
+            email: "user@gmail.com",
+            password: "User123"
+        }
+    };
+
+    const handleDemoLogin = (role) => {
+        const credential = demoCredentials[role];
+
+        // Auto fill form
+        setValue("email", credential.email);
+        setValue("password", credential.password);
+
+        // Auto submit
+        handleSignIn(credential);
+    };
 
     const handleSignIn = (data) => {
         console.log("After Sign in:", data)
