@@ -6,6 +6,7 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 import { FaEye, FaEyeSlash, FaRegUser } from 'react-icons/fa6';
 import { MdOutlineAdminPanelSettings } from "react-icons/md";
 import { GrUserSettings } from 'react-icons/gr';
+import Swal from 'sweetalert2';
 
 const Login = () => {
 
@@ -53,10 +54,32 @@ const Login = () => {
         signInUser(data.email, data.password)
             .then(result => {
                 console.log(result.user);
+
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    iconColor: "#0f172b",
+                    color: "#0f172b",
+                    background: "#7C3AED",
+                    title: "Login Successfully",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+
                 navigate(location?.state || '/')
             })
             .catch(error => {
-                console.log(error.message)
+                console.log(error.message);
+                Swal.fire({
+                    position: "top-end",
+                    icon: "error",
+                    iconColor: "#0f172b",
+                    color: "#0f172b",
+                    background: "#7C3AED",
+                    title: "Invalid Email & Password",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
             })
     }
 
