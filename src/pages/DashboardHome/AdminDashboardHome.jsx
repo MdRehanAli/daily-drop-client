@@ -25,25 +25,27 @@ const AdminDashboardHome = () => {
         <div className='shadow-xl bg-gray-100 rounded-2xl p-5 py-10 md:p-10 w-11/12 mx-auto mt-8'>
             <h1 className='text-3xl md:text-5xl text-center font-extrabold text-secondary mb-5'>Admin Dashboard</h1>
 
-            <div className="stats shadow">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {
-                    deliveryStats.map(stat => <div key={stat._id} className="stat">
-                        <div className="stat-figure text-secondary">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                className="inline-block h-8 w-8 stroke-current"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                                ></path>
-                            </svg>
+                    deliveryStats.map(stat => <div key={stat._id} className="border border-primary bg-primary/5 p-5 rounded-xl">
+                        <div className='flex justify-between flex-row-reverse'>
+                            <div className="stat-figure text-secondary">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    className="inline-block h-8 w-8 stroke-current"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
+                                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <div className="stat-title text-2xl">{stat._id}</div>
                         </div>
-                        <div className="stat-title text-2xl">{stat._id}</div>
                         <div className="stat-value">{stat.count}</div>
                         <div className="stat-desc">Jan 1st - Feb 1st</div>
                     </div>)
