@@ -14,7 +14,7 @@ const UserDashboardHome = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5'>
                 <div className='p-4 border border-secondary rounded-xl flex flex-col gap-2 text-secondary'>
                     <LiaHandsHelpingSolid className='text-3xl animate-[pulse_1s_linear_infinite_reverse] hover:animate-none' />
-                    <h1 className='text-4xl mt-4 font-semibold'>1174</h1>
+                    <h1 className='text-4xl mt-4 font-semibold'>135</h1>
                     <p>Total amount of Orders</p>
                 </div>
                 <div className='p-4 border border-secondary rounded-xl flex flex-col gap-2 text-secondary'>
