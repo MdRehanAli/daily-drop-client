@@ -16,7 +16,7 @@ const RiderDashboardHome = () => {
                 </div>
                 <div className='p-4 border border-secondary rounded-xl flex flex-col gap-2 text-secondary'>
                     <FaRegCreditCard className='text-3xl animate-[pulse_1s_linear_infinite_reverse] hover:animate-none' />
-                    <h1 className='text-4xl mt-4 font-semibold'>$ 8,264,265</h1>
+                    <h1 className='text-4xl mt-4 font-semibold'>$ 64,265</h1>
                     <p>Total amount of Orders</p>
                 </div>
                 <div className='p-4 border border-secondary rounded-xl flex flex-col gap-2 text-secondary'>
