@@ -31,7 +31,7 @@ Welcome to **Daily Drop**!
 
 ---
 
-## 🚚 Delivery Workflow
+## 🚚 Delivery Workflow 
 
 ```mermaid
 flowchart TD
